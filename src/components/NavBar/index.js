@@ -8,14 +8,14 @@ const Navbar = () => {
     <>
       <Nav>
         <NavMenu>
-            <NavLink to="/App" activeStyle>
-                Home
+            <NavLink to="/" activeStyle>
+                HOME
             </NavLink>
           <NavLink to="/recipes" activeStyle>
-            Recipes
+            RECIPES
           </NavLink>
           <NavLink to="/about" activeStyle>
-            About
+            ABOUT
           </NavLink>
         </NavMenu>
       </Nav>

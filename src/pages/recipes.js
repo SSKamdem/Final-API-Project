@@ -4,7 +4,7 @@ import axios from "axios";
 const Recipes = () => {
 
     const [Data, setData] = useState({
-        strMeal: '',
+        strMeal: "",
         strCategory: '',
         strArea: '',
         strInstructions: '',
