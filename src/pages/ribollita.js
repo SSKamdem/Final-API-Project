@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import './pages.css';
-  
+
+//Ribollita Page
 const Ribollita = () => {
 
     const [Data, setData] = useState({

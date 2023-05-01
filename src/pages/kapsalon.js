@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import './pages.css';
-  
+
+//Kapsalon Page  
 const Kapsalon = () => {
 
     const [Data, setData] = useState({

@@ -1,8 +1,11 @@
+//preliminary imports
 import React from 'react';
 import './App.css';
 import Navbar from './components/NavBar';
 import { BrowserRouter as Router, Routes, Route}
   from 'react-router-dom';
+
+//importing pages
 import Home from './pages/home';
 import Arrabiata from './pages/arrabiata';
 import Ribollita from './pages/ribollita';

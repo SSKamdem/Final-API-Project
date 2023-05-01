@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import './pages.css';
-  
+
+//Ma Po Tofu page
 const Tofu = () => {
 
     const [Data, setData] = useState({
@@ -14,7 +15,7 @@ const Tofu = () => {
       })
 
       useEffect(() => {
-        axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=Ma_Po_Tofu')
+        axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=Ma_Po_Tofu') 
           .then(res => {
             console.log('Response from main API: ', res)
             console.log('Tofu Data: ', res.data)
@@ -47,4 +48,4 @@ const Tofu = () => {
     
   };
 
-  export default Tofu;
+export default Tofu;

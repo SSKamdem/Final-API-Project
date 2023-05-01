@@ -1,8 +1,8 @@
 import React from "react";
 import { Nav, NavLink, NavMenu } 
     from "./NavBarElements";
-import './NavBar.css';
 
+//Navigation bar
 const Navbar = () => {
   return (
     <>
@@ -14,14 +14,14 @@ const Navbar = () => {
           <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/arrabiata" activeStyle>
             ARRABIATA
           </NavLink>
-          <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/ribollita" activeStyle>
-            RIBOLLITA
+          <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/hotpot" activeStyle>
+            HOTPOT
           </NavLink>
           <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/kapsalon" activeStyle>
             KAPSALON
           </NavLink>
-          <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/hotpot" activeStyle>
-            HOTPOT
+          <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/ribollita" activeStyle>
+            RIBOLLITA
           </NavLink>
           <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/tofu" activeStyle>
             TOFU
