@@ -17,7 +17,7 @@ const Kapsalon = () => {
         axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=Kapsalon')
           .then(res => {
             console.log('Response from main API: ', res)
-            console.log('Tofu Data: ', res.data)
+            console.log('Kapsalon Data: ', res.data)
             let kapData = res.data.meals;
 
             console.log('Kapsalon: ', kapData)
