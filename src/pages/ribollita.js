@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import './pages.css';
   
-const Recipes = () => {
+const Ribollita = () => {
 
     const [Data, setData] = useState({
         strMeal: "",
@@ -13,20 +14,20 @@ const Recipes = () => {
       })
 
       useEffect(() => {
-        axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata')
+        axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=Ribollita')
           .then(res => {
             console.log('Response from main API: ', res)
-            console.log('Arrabiata Data: ', res.data)
-            let arrabiataData = res.data.meals;
+            console.log('Ribollita Data: ', res.data)
+            let riboData = res.data.meals;
 
-            console.log('Arrabiata: ', arrabiataData)
+            console.log('Ribollita: ', riboData)
                         
-            setData({ strMeal: arrabiataData.strMeal, 
-              strCategory: arrabiataData.strCategory, 
-              strArea: arrabiataData.strArea, 
-              strInstructions: arrabiataData.strInstructions, 
-              image: arrabiataData.strMealThumb
-             })
+            setData({ strMeal: riboData[0].strMeal, 
+              strCategory: riboData[0].strCategory, 
+              strArea: riboData[0].strArea, 
+              strInstructions: riboData[0].strInstructions, 
+              image: riboData[0].strMealThumb
+            })
           })
           .catch(err => {
             console.log(err);
@@ -36,7 +37,7 @@ const Recipes = () => {
       return (
     
         <div>
-          <h1> Meal Name: {Data.strMeal}</h1>
+          <h2> {Data.strMeal}</h2>
           <p> Category: {Data.strCategory}</p>
           <p> Area of Origin: {Data.strArea}</p>
           <p> Instructions: {Data.strInstructions}</p>
@@ -46,4 +47,4 @@ const Recipes = () => {
     
   };
 
-  export default Recipes;
+  export default Ribollita;

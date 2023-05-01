@@ -6,16 +6,25 @@ import './NavBar.css';
 const Navbar = () => {
   return (
     <>
-      <Nav>
+      <Nav style={{backgroundColor: "#ffcccc"}}>
         <NavMenu>
-            <NavLink to="/" activeStyle>
-                HOME
+            <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/" activeStyle>
+            HOME
             </NavLink>
-          <NavLink to="/recipes" activeStyle>
-            RECIPES
+          <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/arrabiata" activeStyle>
+            ARRABIATA
           </NavLink>
-          <NavLink to="/about" activeStyle>
-            ABOUT
+          <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/ribollita" activeStyle>
+            RIBOLLITA
+          </NavLink>
+          <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/kapsalon" activeStyle>
+            KAPSALON
+          </NavLink>
+          <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/hotpot" activeStyle>
+            HOTPOT
+          </NavLink>
+          <NavLink style={{color: "white", fontFamily: "fantasy"}} to="/tofu" activeStyle>
+            TOFU
           </NavLink>
         </NavMenu>
       </Nav>
