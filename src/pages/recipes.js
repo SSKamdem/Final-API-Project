@@ -10,22 +10,21 @@ const Recipes = () => {
         strInstructions: '',
         strMealThumb: '',
     
-    
       })
+
       useEffect(() => {
         axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata')
           .then(res => {
             console.log('Response from main API: ', res)
-            console.log('Arrabiata Data ', res.data)
-            let index = Math.floor(Math.random()* res.data.length)
-            let arrabiataData = res.data[index];
-            
+            console.log('Arrabiata Data: ', res.data)
+            let arrabiataData = res.data.meals;
+
             console.log('Arrabiata: ', arrabiataData)
-            
-            setData({ name: arrabiataData.strMeal, 
-              category: arrabiataData.strCategory, 
-              area: arrabiataData.strArea, 
-              instructions: arrabiataData.strInstructions, 
+                        
+            setData({ strMeal: arrabiataData.strMeal, 
+              strCategory: arrabiataData.strCategory, 
+              strArea: arrabiataData.strArea, 
+              strInstructions: arrabiataData.strInstructions, 
               image: arrabiataData.strMealThumb
              })
           })
@@ -37,11 +36,11 @@ const Recipes = () => {
       return (
     
         <div>
-          <h1> Meal Name: {Data.name}</h1>
-          <h1> Category: {Data.category}</h1>
-          <h1> Area of Origin: {Data.area}</h1>
-          <h1> Instructions: {Data.instructions}</h1>
-          <img src={Data.image} alt={Data.name} />
+          <h1> Meal Name: {Data.strMeal}</h1>
+          <p> Category: {Data.strCategory}</p>
+          <p> Area of Origin: {Data.strArea}</p>
+          <p> Instructions: {Data.strInstructions}</p>
+          <img src={Data.image} alt={Data.strMeal} />
         </div>
       );
     
